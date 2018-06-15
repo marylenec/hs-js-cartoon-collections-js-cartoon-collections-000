@@ -49,18 +49,25 @@ function findTheCheese(m) {
   var msg = "";
   var count = 0;
   for (var i = 0; i < m.length; i++) {
-  var word = m[i];
-  if (word === "cheddar") {
-      count += 1;
+  //first time in loop banana
+  //second time in loop cheddar
+  //third time in loop sock
+    var word = m[i];
+    // count += 1;
+    //first time in loop does not equal cheddar
+    if (word === "cheddar") {
+        count += 1;
+        msg = m[i];
+      }
+    //first time in loop count is 0 
+    console.log("cheddar: " + count);
+    if (count === 0) {
+      msg = "no cheese!";
     }
-  if (count === 1) {
-    msg = "cheddar"
-  } else {
-    msg = "no cheese!"
+
   }
-  }
-  console.log(count);
+  // console.log(count);
   console.log(msg);
 }
 
-findTheCheese(cheddarCheese);
+findTheCheese(noCheeseArray);
